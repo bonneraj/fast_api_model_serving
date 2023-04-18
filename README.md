@@ -10,3 +10,8 @@ The goal of this project is to build a basic linear regression model to be serve
 3. Test application by running 'uvicorn main:app'
 4. Run 'curl -X GET http://localhost:8000/info' in a bash terminal
 5. Run 'docker build . -t fast_api_model_serving' with Docker Desktop up and running
+
+# Sample API Call
+curl -H "Content-Type: application/json" -d '{
+  "list_price": 18500.00
+}' -XPOST http://0.0.0.0:8000/predict
