@@ -11,5 +11,5 @@ def get_model_response(input):
     X = pd.json_normalize(input.__dict__)
     prediction = predict(X, model)
     return {
-        'prediction': int(prediction)
+        'prediction': round(float(prediction), 2)
     }
